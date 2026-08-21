@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PhotoDelete</title>
+
+  <meta
+    name="description"
+    content="Clean your camera roll by swiping. Delete photos faster and free up storage."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      background:
+        radial-gradient(
+          circle at 50% 17%,
+          #1b1920 0%,
+          #111014 34%,
+          #09090b 68%,
+          #060607 100%
+        );
+
+      color: #ffffff;
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 430px;
+
+      min-height: 100vh;
+      min-height: 100dvh;
+
+      margin: 0 auto;
+      padding: 22px 17px 20px;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Hauptinhalt */
+    .hero {
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      text-align: center;
+
+      /* Etwas oberhalb der exakten Bildschirmmitte */
+      transform: translateY(-58px);
+    }
+
+    .logo {
+      display: block;
+
+      width: 96px;
+      height: 96px;
+
+      margin: 0 auto 20px;
+
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    h1 {
+      margin: 0 0 9px;
+
+      font-size: 25px;
+      line-height: 1.15;
+      font-weight: 700;
+
+      letter-spacing: -0.35px;
+    }
+
+    .description {
+      margin: 0;
+
+      font-size: 15px;
+      line-height: 1.42;
+      font-weight: 500;
+    }
+
+    .download-hint {
+      display: block;
+
+      margin-top: 2px;
+
+      font-weight: 600;
+    }
+
+    /* Download-Button */
+    .download {
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      min-height: 66px;
+
+      margin-top: 29px;
+      padding: 0 68px;
+
+      color: #ffffff;
+
+      background: #131316;
+
+      border: 1px solid #55555c;
+      border-radius: 13px;
+
+      box-shadow:
+        0 9px 28px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 255, 255, 0.045);
+
+      font-size: 16px;
+      line-height: 1;
+      font-weight: 600;
+
+      text-decoration: none;
+
+      transition:
+        transform 0.12s ease,
+        background 0.12s ease,
+        border-color 0.12s ease;
+    }
+
+    .download:hover {
+      background: #19191d;
+      border-color: #68686f;
+    }
+
+    .download:active {
+      transform: scale(0.985);
+      background: #1b1b1f;
+    }
+
+    /* Neutrales Download-Symbol */
+    .download-icon {
+      position: absolute;
+
+      left: 24px;
+      top: 50%;
+
+      transform: translateY(-52%);
+
+      width: 29px;
+      height: 29px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #ffffff;
+
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 400;
+    }
+
+    /* Drei Punkte rechts */
+    .more {
+      position: absolute;
+
+      right: 20px;
+      top: 50%;
+
+      transform: translateY(-53%);
+
+      color: #9c9ca2;
+
+      font-size: 21px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    /* Legal Footer */
+    footer {
+      flex-shrink: 0;
+
+      padding: 18px 0 5px;
+
+      text-align: center;
+
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    footer a {
+      color: #b0b0b6;
+      text-decoration: none;
+
+      transition: color 0.12s ease;
+    }
+
+    footer a:hover,
+    footer a:focus {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .separator {
+      margin: 0 10px;
+
+      color: #69696f;
+    }
+
+    /* Kleinere Displays */
+    @media (max-height: 680px) {
+      .hero {
+        transform: translateY(-32px);
+      }
+
+      .logo {
+        width: 84px;
+        height: 84px;
+        margin-bottom: 16px;
+      }
+
+      .download {
+        margin-top: 23px;
+      }
+
+      footer {
+        font-size: 13px;
+      }
+    }
+
+    /* Größere Displays */
+    @media (min-width: 600px) {
+      .page {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <main class="page">
+
+    <section class="hero">
+
+      <img
+        src="./logo.png"
+        alt="PhotoDelete"
+        class="logo"
+      >
+
+      <h1>PhotoDelete</h1>
+
+      <p class="description">
+        Clean your camera roll by swiping.<br>
+        Delete photos faster &amp; free up storage.
+
+        <span class="download-hint">
+          Download on the App Store ↓
+        </span>
+      </p>
+
+
+      <a
+        class="download"
+        href="https://apps.apple.com/app/id6762371378"
+        aria-label="Download PhotoDelete on the App Store"
+      >
+
+        <span
+          class="download-icon"
+          aria-hidden="true"
+        >
+          ↓
+        </span>
+
+        <span>
+          Download PhotoDelete
+        </span>
+
+        <span
+          class="more"
+          aria-hidden="true"
+        >
+          ⋮
+        </span>
+
+      </a>
+
+    </section>
+
+
+    <footer>
+
+      <a href="./impressum.html">
+        Impressum
+      </a>
+
+      <span class="separator">·</span>
+
+      <a href="./website-privacy.html">
+        Privacy Policy
+      </a>
+
+    </footer>
+
+  </main>
+
+</body>
+</html>
