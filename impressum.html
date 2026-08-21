@@ -1,88 +1,204 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Impressum - PhotoDelete</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Impressum – PhotoDelete</title>
+
   <style>
-    :root {
-      color-scheme: light dark;
-      --fg: #151515;
-      --bg: #ffffff;
-      --link: #0a66c2;
-      --border: #e6e6e6;
+    * {
+      box-sizing: border-box;
     }
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --fg: #f5f5f5;
-        --bg: #0b0b0c;
-        --link: #7ab7ff;
-        --border: #2a2a2d;
-      }
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
     }
 
     body {
-      margin: 0;
-      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--fg);
+      background: #ffffff;
+      color: #1d1d1f;
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
     main {
-      max-width: 860px;
+      width: 100%;
+      max-width: 900px;
+
       margin: 0 auto;
-      padding: 40px 22px 64px;
+      padding: 42px 26px 32px;
     }
 
     h1 {
-      font-size: 34px;
-      line-height: 1.15;
-      margin: 0 0 8px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid var(--border);
+      margin: 0 0 18px;
+
+      font-size: 36px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+
+      margin-bottom: 32px;
+
+      background: #e4e4e4;
     }
 
     h2 {
+      margin: 32px 0 14px;
+
       font-size: 22px;
-      line-height: 1.25;
-      margin-top: 34px;
+      line-height: 1.3;
+      font-weight: 700;
     }
 
     p {
-      color: var(--fg);
+      margin: 0 0 12px;
+
+      font-size: 17px;
+      line-height: 1.55;
     }
 
     a {
-      color: var(--link);
+      color: #0066cc;
       text-decoration: none;
     }
 
-    a:hover {
+    a:hover,
+    a:focus {
       text-decoration: underline;
+    }
+
+    .legal-footer {
+      margin-top: 52px;
+      padding-top: 20px;
+
+      border-top: 1px solid #e5e5e5;
+
+      text-align: center;
+
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .legal-footer a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    .legal-footer a:hover,
+    .legal-footer a:focus {
+      color: #111;
+      text-decoration: underline;
+    }
+
+    .legal-footer .separator {
+      margin: 0 10px;
+      color: #aaa;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 30px 20px 26px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        margin-top: 28px;
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .legal-footer {
+        margin-top: 44px;
+        font-size: 13px;
+      }
     }
   </style>
 </head>
+
+
 <body>
-<main>
-  <h1>Impressum</h1>
 
-  <h2>Angaben gemäß § 5 DDG</h2>
-  <p>
-    Moritz Stieber<br>
-    Geschäftsbezeichnung: WebVital<br>
-    Immenhofer Straße 30A<br>
-    70180 Stuttgart
-  </p>
+  <main>
 
-  <h2>Kontakt</h2>
-  <p>E-Mail: <a href="mailto:webvitalsoftware@gmail.com">webvitalsoftware@gmail.com</a></p>
+    <h1>Impressum</h1>
+
+    <div class="divider"></div>
+
+
+    <h2>Angaben gemäß § 5 DDG</h2>
+
+    <p>
+      Moritz Simon Stieber<br>
+      Geschäftsbezeichnung: WebVital<br>
+      Immenhofer Straße 30A<br>
+      70180 Stuttgart<br>
+      Deutschland
+    </p>
+
+
+    <h2>Kontakt</h2>
+
+    <p>
+      E-Mail:
+      <a href="mailto:webvitalsoftware@gmail.com">
+        webvitalsoftware@gmail.com
+      </a>
+    </p>
+
 
     <h2>Umsatzsteuer-ID</h2>
-  <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:<br>DE462601008</p>
 
-  <h2>Verbraucherstreitbeilegung</h2>
-  <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
-</main>
+    <p>
+      Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:<br>
+      DE462601008
+    </p>
+
+
+    <h2>Verbraucherstreitbeilegung</h2>
+
+    <p>
+      Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren
+      vor einer Verbraucherschlichtungsstelle teilzunehmen.
+    </p>
+
+
+    <footer class="legal-footer">
+
+      <a href="./index.html">
+        PhotoDelete
+      </a>
+
+      <span class="separator">·</span>
+
+      <a href="./website-privacy.html">
+        Privacy Policy
+      </a>
+
+    </footer>
+
+  </main>
+
 </body>
 </html>
